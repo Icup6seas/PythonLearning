@@ -24,4 +24,3 @@ while gamesList < 8:
     else:
         print(rngGames + "\t" + "\t" + rngReactions)
     gamesList += 1
-
