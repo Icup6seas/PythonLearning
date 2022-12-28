@@ -13,5 +13,5 @@ while numOfQuestions < 8:
     randomChoice = random.choice(choicesList)
     print(randomChoice)
     choicesLog.append(randomChoice)
-    print(choicesLog)
     numOfQuestions += 1
+print(choicesLog)
