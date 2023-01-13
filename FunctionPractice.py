@@ -160,9 +160,26 @@
 # Return 0 for no numbers.
 
 def summer_69(arr):
-    pass
+    total = 0
+    add = True
+    for number in arr:
+        while add:
+            if number!=6:
+                total+=number
+                break
+            else:
+                add = False
+        while not add:
+            if number!=9:
+                break
+            else:
+                add = True
+                break
+    # return total
+    print(total)
 
-
-summer_69([1, 3, 5])
+# summer_69([1, 3, 5])
 # summer_69([4,5,6,7,8,9])
 # summer_69([2,1,6,9,11])
+
+
