@@ -159,27 +159,66 @@
 # to the next 9 (every 6 will be followed by at least one 9).
 # Return 0 for no numbers.
 
-def summer_69(arr):
-    total = 0
-    add = True
-    for number in arr:
-        while add:
-            if number!=6:
-                total+=number
-                break
-            else:
-                add = False
-        while not add:
-            if number!=9:
-                break
-            else:
-                add = True
-                break
-    # return total
-    print(total)
-
-# summer_69([1, 3, 5])
+# def summer_69(arr):
+#     total = 0
+#     add = True
+#     for number in arr:
+#         while add:
+#             if number != 6:
+#                 total += number
+#                 break
+#             else:
+#                 add = False
+#         while not add:
+#             if number != 9:
+#                 break
+#             else:
+#                 add = True
+#                 break
+#     print(total)
+#
+#
+# summer_69([1,3,5,6,9,10])
 # summer_69([4,5,6,7,8,9])
 # summer_69([2,1,6,9,11])
 
 
+# SPY GAME: Write a function that takes in a list of integers and returns True if it contains 007 in order
+
+# def spy_game(numbers):
+#     code = [0, 0, 7, 'x']
+#
+#     for num in numbers:
+#         if num == code[0]:
+#             code.pop(0)  # code.remove(num) also works
+#
+#     # return len(code) == 1
+#     print(len(code) == 1)
+
+
+# spy_game([1,2,4,0,0,7,5])
+# spy_game([1,0,2,4,0,5,7])
+# spy_game([1,7,2,0,4,5,0])
+
+
+# COUNT PRIMES: Write a function that returns the number of prime numbers that exist up to
+# and including a given number
+
+# def count_primes(num):
+#     primes = [2]
+#     x = 3
+#     if num < 2:
+#         return 0
+#     while x <= num:
+#         for y in primes:
+#             if x % y == 0:
+#                 x += 2
+#                 break
+#         else:
+#             primes.append(x)
+#             x += 2
+#     print(primes)
+#     return len(primes)
+#
+#
+# count_primes(100)
