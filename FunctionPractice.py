@@ -149,7 +149,8 @@
 #     else:
 #         print("Something's wrong!")
 #
-# # blackjack(5,6,7)
+#
+# blackjack(5,6,7)
 # # blackjack(9,9,9)
 # blackjack(9,9,11)
 
