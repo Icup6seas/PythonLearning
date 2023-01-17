@@ -31,7 +31,5 @@ G
 Practice.py,2\2\22ca629d510d89a6f97d8a1744f25dc1f35adfe9
 S
 #Lambda_Expression_Map_and_Filter.py,5\8\5824911a7b9560ac51d3927025a1e059420d931b
-K
-Methods_and_functions_HW.py,d\d\dd5cf182c97ee17b024635f3407831af4dcf6253
 C
 FunctionPractice.py,4\e\4ee43d4f8e625c7ab612ef6769c24c3d9a88de14

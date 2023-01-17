@@ -2,6 +2,7 @@
 """
 Write a function that computes the volume of a sphere given its radius
 """
+
 # def vol(rad):
 #     radius = (4/3)*(3.14*(rad**3))
 #     print(radius)
@@ -40,9 +41,19 @@ and lower case letters.
 """
 
 def up_low(mystring):
-    pass
+    uppercount = 0
+    lowercount = 0
+    for word in mystring:
+        if word.isupper():
+            uppercount+=1
+        elif word.islower():
+            lowercount+=1
+        else:
+            print("Something went wrong...")
+    print(uppercount)
+    print(lowercount)
 
 
-mystring = "Hello Mr. Rogers, how are tou this fine eveing?"
+mystring = "Hello Mr. Rogers, how are you this fine evening?"
 up_low(mystring)
 
