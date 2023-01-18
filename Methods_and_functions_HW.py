@@ -124,15 +124,11 @@ String module has been imported to generate the list of letters
 
 
 def ispangram(mypangram, alphabet=string.ascii_lowercase):
-    def ispangram(mypangram, alphabet=string.ascii_lowercase):
-        alphaset = set(alphabet)
-        mypangram = mypangram.replace(' ', '')
-        mypangram = mypangram.lower()
-        mypangram = set(mypangram)
-        print(mypangram == alphaset)
-
-    mypangram = "The quick brown fox jumps over the lazy dog"
-    ispangram(mypangram)
+    alphaset = set(alphabet)
+    mypangram = mypangram.replace(' ', '')
+    mypangram = mypangram.lower()
+    mypangram = set(mypangram)
+    print(mypangram == alphaset)
 
 
 mypangram = "The quick brown fox jumps over the lazy dog"
