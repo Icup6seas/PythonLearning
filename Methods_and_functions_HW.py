@@ -105,13 +105,15 @@ Write a Python function that checks whether a word or phrase is palindrome or no
 
 
 def palindrome(mypalendrome):
+    mypalendrome = mypalendrome.replace(' ','')
+    print(mypalendrome)
     if mypalendrome == mypalendrome[::-1]:
         print("True")
     else:
         print("False")
 
 
-mypalendrome = 'racecar'
+mypalendrome = 'race car'
 palindrome(mypalendrome)
 
 
