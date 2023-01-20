@@ -87,13 +87,11 @@ def user_input():
                 within_range_column = True
             else:
                 print("Sorry, that's not within 1-3")
-    row_choice = int(row)
-    column_choice = int(column)
-    return row_choice, column_choice
+    return int(row), int(column)
 
 
 # Function to change input into correct array index, in prep for replace_choice()
-def translate_user_choice():
+def translate_user_choice(user_input):
     match user_input:
         case 1:
             print(0)
@@ -109,9 +107,12 @@ def translate_user_choice():
             return "Something went wrong!"
 
 
+
 # Function to modify board with user input from user_input()
-def replace_choice():
-    pass
+def replace_choice(row,column):
+    # Returns translated row and column choices
+    translate_user_choice(row,column)
+    print(row,column)
 
 
 # Check to see if player won
@@ -120,5 +121,4 @@ def check_win():
 
 
 welcome_screen()
-translate_user_choice()
-# replace_choice(user_input)
+replace_choice()
