@@ -93,8 +93,8 @@ def user_input():
 
 
 # Function to change input into correct array index, in prep for replace_choice()
-def translate_user_choice():
-    match user_input:
+def translate_user_choice(row_choice,column_choice):
+    match row_choice or column_choice:
         case 1:
             print(0)
             return 0
@@ -119,6 +119,9 @@ def check_win():
     pass
 
 
-welcome_screen()
-translate_user_choice()
-# replace_choice(user_input)
+def main():
+    welcome_screen()
+    translate_user_choice()
+
+
+main()
