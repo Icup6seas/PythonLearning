@@ -121,6 +121,7 @@ def check_win():
 
 def main():
     welcome_screen()
+    ### USER_INPUT IS THE VARIABLE ---- set it equal to a valriable {user_input = user_input()}!!!!!!
     translate_user_choice()
 
 
