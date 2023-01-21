@@ -93,20 +93,21 @@ def user_input():
 
 
 # Function to change input into correct array index, in prep for replace_choice()
-def translate_user_choice(row_choice,column_choice):
-    match row_choice or column_choice:
-        case 1:
-            print(0)
-            return 0
-        case 2:
-            print(1)
-            return 1
-        case 3:
-            print(2)
-            return 2
-        case _:
-            print("Something went wrong!")
-            return "Something went wrong!"
+def translate_user_choice():
+    pass
+    # match XXXX or XXXX:
+    #     case 1:
+    #         print(0)
+    #         return 0
+    #     case 2:
+    #         print(1)
+    #         return 1
+    #     case 3:
+    #         print(2)
+    #         return 2
+    #     case _:
+    #         print("Something went wrong!")
+    #         return "Something went wrong!"
 
 
 # Function to modify board with user input from user_input()
@@ -121,8 +122,10 @@ def check_win():
 
 def main():
     welcome_screen()
-    ### USER_INPUT IS THE VARIABLE ---- set it equal to a valriable {user_input = user_input()}!!!!!!
-    translate_user_choice()
+    # USER_INPUT IS THE VARIABLE ---- set it equal to a variable {user_input = user_input()}!!!!!!
+    # translate_user_choice()
+
+
 
 
 main()
