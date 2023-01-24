@@ -61,13 +61,14 @@ def display():
 # Returns input
 def user_input():
     # Variables
-    row = ""
-    column = ""
+    row = ''
+    column = ''
     acceptable_range = range(1, 4)
     within_range_row = False
     within_range_column = False
 
     # Two conditions to check for ROW
+    # TODO Maybe have to reconfigure these while loops into nested while loops...
     while row.isdigit() == False or within_range_row == False:
         row = input("Please enter a ROW number (1-3): ")
         # Digit check
