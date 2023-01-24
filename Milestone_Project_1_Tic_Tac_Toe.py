@@ -7,7 +7,8 @@ Tic,Tac,Toe
 
 # Splash screen to see if the user wants to play or not
 def welcome_screen():
-    result = ""
+    result = ''
+    quit_game = False
     within_range = False
     acceptable_result_range_list = [1, 2]
 
@@ -15,25 +16,28 @@ def welcome_screen():
     print("TIC - TAC - TOE")
 
     # Validation
-    while result.isdigit() == False or within_range == False:
-        result = input("Enter 1 to Start or 2 to Quit: ")
-        # Check if digit
-        if result.isdigit() == False:
-            print("Invalid Entry, please try again: ")
-        # Range Check
-        if result.isdigit() == True:
-            if int(result) in acceptable_result_range_list:
-                within_range = True
-                # Check for option 1
+    while quit_game == False:
+        while result.isdigit() == False or within_range == False:
+            result = input("Enter 1 to START or ANY OTHER NUMBER to Quit: ")
+            # Check if digit
+            if result.isdigit() == False:
+                # clear()
+                print("Invalid Entry, please try again")
+            # Range Check
+            elif result.isdigit() == True and int(result) in acceptable_result_range_list:
                 if int(result) == 1:
+                    # Check for option 1
                     # clear()
+                    within_range = True
                     display()
-                    user_input()
-                else:
+                elif int(result) == 2:
                     # clear()
                     print("Thanks for playing!")
+                    quit_game = True
+                    print(quit_game)
+                    quit(print("Quitting"))
             else:
-                print("Invalid Entry, please try again: ")
+                print("Invalid Entry, please try again")
 
 
 # Clear display
@@ -49,6 +53,8 @@ def display():
     print(row1)
     print(row2)
     print(row3)
+
+    user_input()
 
 
 # Gets the users input
@@ -69,7 +75,7 @@ def user_input():
         if row.isdigit() == False:
             print("Sorry, that's not a digit!")
         # Range check
-        if row.isdigit() == True:
+        elif row.isdigit() == True:
             if int(row) in acceptable_range:
                 within_range_row = True
             else:
@@ -94,19 +100,11 @@ def user_input():
 
 # Function to change input into correct array index, in prep for replace_choice()
 def translate_user_choice(user_choice):
-    match user_choice:
-        case 1:
-            print(0)
-            return 0
-        case 2:
-            print(1)
-            return 1
-        case 3:
-            print(2)
-            return 2
-        case _:
-            print("Something went wrong!")
-            return "Something went wrong!"
+    pass
+    # user_choice = list(user_input() + 1)
+    # user_choice_translated = user_choice+1
+    # print(user_choice_translated + ' ' + 'Translated!')
+    # return user_choice_translated + ' ' + 'Translated!'
 
 
 # Function to modify board with user input from user_input()
@@ -121,10 +119,11 @@ def check_win():
 
 def main_game():
     welcome_screen()
-    user_choice = user_input()
-    translate_user_choice(user_choice)
-    user_choice_translated = translate_user_choice(user_choice)
-
+    print("Before the user input and after the welcome screen function")
+    print("After the user input function")
+    # user_choice = user_input()
+    # print(user_choice)
+    # translate_user_choice(user_choice)
 
 
 main_game()

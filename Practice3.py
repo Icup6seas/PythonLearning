@@ -11,3 +11,5 @@ for value in range(10,24):
     answer = get_random(value)
     print(answer)
 
+
+
