@@ -34,8 +34,7 @@ def welcome_screen():
                     # clear()
                     print("Thanks for playing!")
                     quit_game = True
-                    print(quit_game)
-                    quit(print("Quitting"))
+                    quit()
             else:
                 print("Invalid Entry, please try again")
 
@@ -119,11 +118,7 @@ def check_win():
 
 def main_game():
     welcome_screen()
-    print("Before the user input and after the welcome screen function")
     print("After the user input function")
-    # user_choice = user_input()
-    # print(user_choice)
-    # translate_user_choice(user_choice)
 
 
 main_game()
