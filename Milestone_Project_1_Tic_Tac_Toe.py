@@ -19,6 +19,7 @@ def display():
     print(row1)
     print(row2)
     print(row3)
+    return
 
 
 # Gets the users input
@@ -27,7 +28,6 @@ def display():
 def user_input_row():
     # Variables
     row = ''
-    print(type(row))
     acceptable_range = range(1, 4)
     within_range_row = False
 
@@ -44,7 +44,6 @@ def user_input_row():
             else:
                 print("Sorry, that's not within 1-3")
     row_choice = int(row)-1
-    print(row_choice)
     return row_choice
 
 
@@ -109,7 +108,12 @@ def main_game():
                 if int(result) == 1:
                     # Check for option 1
                     within_range = True
+                    # TODO Does display have to be outside of this loop?!?
+                    # Call Display()
                     display()
+                    user_input_row()
+                    user_input_column()
+
                 elif int(result) == 2:
                     clear()
                     print("Thanks for playing!")
@@ -119,15 +123,6 @@ def main_game():
                     quit()
             else:
                 print("Invalid Entry, please try again")
-
-    # Call display
-    # display()
-
-    # Call user_input_row
-    user_input_row()
-
-    # Call user_input_column
-    user_input_column()
 
 
 # calling the game
