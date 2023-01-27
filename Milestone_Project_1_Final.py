@@ -12,6 +12,7 @@ def display_board(board):
     print(' '+'---'+'---'+'---')
     print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
 
+
 # Get user input to assign markers to players
 def player_input():
     player_marker = ''
