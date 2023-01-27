@@ -18,7 +18,7 @@ def player_input():
 
     # if not X or O, keep asking
     while not (player_marker == 'X' or player_marker == 'O'):
-        player_marker = input("Player 1: Please type which marker you'd like to be - 'X' or 'O': ").upper()
+        player_marker = input("Choose one - 'X' or 'O': ").upper()
     if player_marker == 'X':
         return ('X','O')
     else:
@@ -67,7 +67,7 @@ def board_full_check(board):
 # Next position
 def player_choice(board):
     position = 0
-    board_list = [1,2,3,4,5,6,7,8,9]
+    board_list = list(range(1,9))
     while position not in board_list or not space_free_check(board,position):
         position = int(input("Choose your next position: "))
     return position
@@ -86,7 +86,7 @@ while True:
     turn = random_first_player()
     print(turn + ' will go first.')
 
-    play_game = input('Are you ready to play? Enter Y or N.')
+    play_game = input('Are you ready to play? Enter Y or N: ')
 
     if play_game.upper()[0] == 'Y':
         game_on = True
