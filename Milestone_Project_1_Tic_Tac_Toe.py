@@ -86,6 +86,7 @@ def check_win():
     pass
 
 
+# In order for this to work, I may need to remove this logic from this function
 def main_game():
     result = ''
     quit_game = False
