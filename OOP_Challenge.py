@@ -10,7 +10,7 @@ class Account():
         self.balance = balance
 
     def __str__(self):
-        return f"Account owner: {self.owner} \nfAccount balance: {self.balance}"
+        return f"Account owner: {self.owner} \nAccount balance: {self.balance}"
 
     def deposit(self,dollars):
         print(f"Deposit Processed of {dollars}")
