@@ -37,7 +37,3 @@ acct1.withdraw(1000)
 print(acct1.balance)
 acct1.withdraw(100)
 print(acct1.balance)
-
-
-
-
