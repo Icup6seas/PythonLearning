@@ -21,21 +21,6 @@ class Card():
         return self.rank + " of " + self.suit
 
 
-# three_of_clubs = Card("Clubs","Three")
-# print(three_of_clubs.value)
-# print(three_of_clubs.rank)
-# print(three_of_clubs.suit)
-#
-#
-# two_hearts = Card("Spades","Ace")
-#
-# print(two_hearts)
-#
-# print(two_hearts.value)
-#
-# print(two_hearts.value < three_of_clubs.value)
-
-
 class Deck():
 
     def __init__(self):
