@@ -1,6 +1,7 @@
-'''
+"""
 WAR Game!
-'''
+"""
+import random
 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten',
@@ -20,17 +21,47 @@ class Card():
         return self.rank + " of " + self.suit
 
 
-three_of_clubs = Card("Clubs","Three")
-print(three_of_clubs.value)
-print(three_of_clubs.rank)
-print(three_of_clubs.suit)
+# three_of_clubs = Card("Clubs","Three")
+# print(three_of_clubs.value)
+# print(three_of_clubs.rank)
+# print(three_of_clubs.suit)
+#
+#
+# two_hearts = Card("Spades","Ace")
+#
+# print(two_hearts)
+#
+# print(two_hearts.value)
+#
+# print(two_hearts.value < three_of_clubs.value)
 
 
-two_hearts = Card("Spades","Ace")
+class Deck():
 
-print(two_hearts)
+    def __init__(self):
+        # Create empty list for all cards
+        self.all_cards = []
 
-print(two_hearts.value)
+        # Creating the cards and adding them to the all_cards list
+        for suit in suits:
+            for rank in ranks:
+                # Create a Card Object
+                created_card = Card(suit,rank)
+                self.all_cards.append(created_card)
 
-print(two_hearts.value < three_of_clubs.value)
+    def shuffle(self):
 
+        random.shuffle(self.all_cards)
+
+    def deal_one(self):
+
+        return self.all_cards.pop()
+
+
+new_deck = Deck()
+new_deck.shuffle()
+my_card = new_deck.deal_one()
+
+print(my_card)
+
+print(len(new_deck.all_cards))
