@@ -10,3 +10,6 @@ class Solution:
         s = s.replace("IV", "IIII").replace("IX", "VIIII").replace("XL", "XXXX").replace("XC", "LXXXX").replace("CD", "CCCC").replace("CM", "DCCCC")
         return sum(map(lambda x: roman_to_int[x],s))
 
+
+romanInt = Solution.romanToInt(self=Solution(),s="MCMXCIV")
+print(romanInt)
