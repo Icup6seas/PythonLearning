@@ -107,6 +107,7 @@ while game_on:
 
     # while playing logic
     at_war = True
+    # war_count = 0
 
     while at_war:
         # Player One beats Player Two
@@ -122,22 +123,24 @@ while game_on:
         else:
             # War has started!
             print("WAR")
+            # war_count += 1
+            # print(war_count)
             # Check players card counts
             # makes sure players have enough cards to play with
             # Player One
-            if len(player_one.all_cards) < 5:
+            if len(player_one.all_cards) < 3:
                 print("Player One cannot fund the War")
                 print("Player Two WINS!")
                 game_on = False
                 break
             # Player Two
-            elif len(player_two.all_cards) < 5:
+            elif len(player_two.all_cards) < 3:
                 print("Player Two cannot fund the War")
                 print("Player One WINS!")
                 game_on = False
                 break
             # Both players have at least the minimum allowed number of cards
             else:
-                for num in range(5):
+                for num in range(3):
                     player_one_cards.append(player_one.remove_one())
                     player_two_cards.append(player_two.remove_one())
