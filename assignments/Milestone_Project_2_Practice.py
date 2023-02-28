@@ -82,6 +82,7 @@ for x in range(26):
 
 game_on = True
 round_num = 0
+war_count = 0
 
 while game_on:
     round_num += 1
@@ -90,10 +91,12 @@ while game_on:
     # Check if someone has no cards
     if len(player_one.all_cards) == 0:
         print("Player ONE is out of cards, Player TWO is the winner!")
+        print(f"Number of WARS played: {war_count}")
         game_on = False
         break
     elif len(player_two.all_cards) == 0:
         print("Player TWO is out of cards, Player ONE is the winner!")
+        print(f"Number of WARS played: {war_count}")
         game_on = False
         break
 
@@ -107,7 +110,6 @@ while game_on:
 
     # while playing logic
     at_war = True
-    # war_count = 0
 
     while at_war:
         # Player One beats Player Two
@@ -122,21 +124,22 @@ while game_on:
             at_war = False
         else:
             # War has started!
-            print("WAR")
-            # war_count += 1
-            # print(war_count)
+            print("** WAR **")
+            war_count += 1
             # Check players card counts
             # makes sure players have enough cards to play with
             # Player One
             if len(player_one.all_cards) < 3:
                 print("Player One cannot fund the War")
                 print("Player Two WINS!")
+                print(f"Number of WARS played: {war_count}")
                 game_on = False
                 break
             # Player Two
             elif len(player_two.all_cards) < 3:
                 print("Player Two cannot fund the War")
                 print("Player One WINS!")
+                print(f"Number of WARS played: {war_count}")
                 game_on = False
                 break
             # Both players have at least the minimum allowed number of cards
